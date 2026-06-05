@@ -176,19 +176,6 @@ This starts — in order:
 4. `move_group` — MoveIt 2 planning server
 5. `rviz2` — visualization and motion planning UI
 
-### Launch with real hardware
-
-```bash
-ros2 launch my_robot_bringup my_robot.launch.xml use_mock_component:=false
-```
-
-### Check active controllers
-
-```bash
-ros2 control list_controllers
-ros2 control list_hardware_interfaces
-```
-
 ---
 
 ## 🎮 Commander Nodes
@@ -202,17 +189,6 @@ ros2 launch my_robot_bringup my_robot.launch.xml
 # Terminal 2
 ros2 run my_robot_commander_cpp commander
 ```
-
-### Python Commander
-
-```bash
-# Terminal 2 (alternative to C++)
-ros2 run my_robot_commander_py commander
-```
-
-Both commanders expose the same topics and are interchangeable.
-
----
 
 ## 📡 Control Topics
 
@@ -301,22 +277,6 @@ Run these steps in the **MotionPlanning** panel in RViz:
 
 ---
 
-## 🧰 Useful Commands
-
-| Task | Command |
-|------|---------|
-| Build all packages | `colcon build` |
-| Build single package | `colcon build --packages-select <pkg>` |
-| Build Python with hot-reload | `colcon build --symlink-install` |
-| Source workspace | `source install/setup.bash` |
-| View TF tree | `ros2 run tf2_tools view_frames` |
-| List active controllers | `ros2 control list_controllers` |
-| Inspect custom message | `ros2 interface show my_robot_interfaces/msg/PoseCommand` |
-| Check all topics | `ros2 topic list` |
-| Visualize URDF quickly | `ros2 launch urdf_tutorial display.launch.py model:=<path>` |
-
----
-
 ## 🐛 Known Issues & Fixes
 
 **`max_velocity has invalid type: expected double got integer`**
@@ -348,7 +308,3 @@ The controller manager needs the `robot_description` parameter passed explicitly
 Pull requests are welcome. For major changes, open an issue first to discuss what you would like to change.
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License.

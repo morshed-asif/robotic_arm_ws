@@ -15,10 +15,8 @@ A complete ROS 2 + MoveIt 2 implementation of a 6-axis robotic arm built from sc
 - **MoveIt 2** — OMPL planning, KDL inverse kinematics, self-collision matrix
 - **Named, joint-space, pose, and Cartesian path** goal types
 - **C++ Commander node** — full MoveIt 2 C++ API with subscribers for programmatic control
-- **Python Commander node** — equivalent API using `moveit-py`, easier to iterate
 - **Custom ROS 2 interfaces** — `PoseCommand.msg` for Cartesian commands over a topic
 - **ROS 2 Control** — `joint_trajectory_controller` and `gripper_controller` wired up and verified
-- **Mock hardware** by default; swap to real hardware with a single launch argument
 - **Fully Dockerised** — pull and run with no manual dependency setup
 
 ---
